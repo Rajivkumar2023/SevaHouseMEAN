@@ -1,0 +1,35 @@
+ #r-nav {
+    padding: 1rem 6rem 1rem 6rem;
+    background: var(--snd-bg-color)!important;
+}
+
+#r-nav a {
+    font-size: 2rem;
+    padding: 2rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+
+.icon {
+    background: var(--text-color) !important;
+    font-size: 3rem;
+  }
+.heading{
+    /* text-align: center; */
+    font-size: 2.5rem;
+}
+
+span{
+    color: var(--main-color);
+}
+  @media(max-width:991px){
+    #r-nav a{
+        font-size: 2.5rem;
+    }
+  }
+  @media(max-width:768px){
+    #r-nav a{
+        font-size:2.5rem;
+    }
+  }

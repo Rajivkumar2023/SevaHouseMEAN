@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@import"../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+:root{
+    --bg-color:#191f36;
+    --snd-bg-color:#262840;
+    --text-color:#fff;
+    --main-color:yellowgreen;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+/* brakpoint */
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3%;
+    }
+    .service {
+        padding: 7rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:768px){
+    .home-content{
+        order: 2;
+        border: none;
+    }
+    
+    
+}
+@media(max-width:617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .home-img img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width: 100vw;
+        margin-top: 4rem;
+        display: none;
+
+    }
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size:50%
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
