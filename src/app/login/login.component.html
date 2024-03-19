@@ -1,16 +1,70 @@
 <!-- contant section design -->
 <section class="contact" id="contact"> 
-  <form >
+  <form [formGroup]="loginForm" >
       <h2>Login</h2>
       <div class="input-box">
-          <input type="email" formControlName="email" placeholder="Email Address">     
+          <input for="email" type="email" formControlName="email" placeholder="Email Address">     
+           <!-- for validations -->
+        <small *ngIf="email.invalid && (email.dirty || email.touched)" class="p-error">
+          <div *ngIf="email.errors?.['required']">Email is required</div>
+          <div *ngIf="email.errors?.['email']">Email should be valid</div>
+        </small>
       </div>
       <div class="input-box">
           <input type="password" formControlName="password" placeholder="password">
-          <h5 class="hFont">Don't have an account? <a href="#">Sign up here</a>.</h5>
-          <a class="pwd" routerLink="/forget">Forget password</a>        
+           <!-- for validations -->
+         <small *ngIf="password.invalid && (password.dirty || password.touched)" class="p-error">
+          <div *ngIf="password.errors?.['required']">password is required</div>
+          <div *ngIf="password.errors?.['password']">password should be valid</div>
+        </small>
+        <!-- <p-button label="Sign In" styleClass="w-full" [disabled]="loginForm.invalid"></p-button> -->
+        <div class="mt-2">Not a member? <a routerLink="/register">Register</a> </div>      
       </div>
       <input type="submit" value="login" class="btn">
      
   </form>
 </section>
+
+<div class="login">
+    <form [formGroup]="loginForm">
+      <p-card header="Login" [style]="{width:'400px'}">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="text"
+          pInputText formControlName="email" 
+          class="w-full" 
+          name="email" 
+          placeholder="Enter your Email"/>
+        </div>
+        <!-- for validations -->
+        <small *ngIf="email.invalid && (email.dirty || email.touched)" class="p-error">
+          <div *ngIf="email.errors?.['required']">Email is required</div>
+          <div *ngIf="email.errors?.['email']">Email should be valid</div>
+  
+        </small>
+  
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password"
+          pInputText formControlName="password" 
+          class="w-full" 
+          name="password" 
+          placeholder="Enter your password"/>
+        </div>
+         <!-- for validations -->
+         <small *ngIf="password.invalid && (password.dirty || password.touched)" class="p-error">
+          <div *ngIf="password.errors?.['required']">password is required</div>
+          <div *ngIf="password.errors?.['password']">password should be valid</div>
+  
+        </small>
+  
+        <p-button label="Sign In" styleClass="w-full" [disabled]="loginForm.invalid"></p-button>
+  
+        <div class="mt-2">Not a member? <a routerLink="/register">Register</a> </div>
+    </p-card>
+    
+    </form>
+    </div>
+    
+  <h1>hello</h1>
+    
