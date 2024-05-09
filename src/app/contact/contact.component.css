@@ -3,6 +3,9 @@
     text-align: center;
     font-size: 4rem;
 }
+.contact{
+    min-height: 100vh;
+}
 .contact h2{
     margin-bottom: 3rem;
     margin-top: 3rem;

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-cart',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './cart.component.html',
+  styleUrl: './cart.component.css'
 })
-export class HomeComponent {
+export class CartComponent {
 
 }
